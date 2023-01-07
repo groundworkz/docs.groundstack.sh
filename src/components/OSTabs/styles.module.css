@@ -1,0 +1,23 @@
+.tabContainer {
+    display: flex;
+     width: 200px;
+    justify-content: space-evenly;
+}
+
+span {
+    cursor: pointer;
+    
+}
+
+span:hover {
+    filter:opacity(80%)
+}
+
+.labelActive {
+    border-bottom: 3px solid #359962;
+    padding: 5px 15px; 
+}
+
+.label {
+    padding: 5px 15px;
+}
