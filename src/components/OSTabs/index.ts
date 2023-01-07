@@ -1,2 +1,2 @@
-export * from './OSTabs'
-export * from './sections'
+export * from "./OSTabs"
+export * from "./sections"

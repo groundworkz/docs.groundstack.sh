@@ -1,3 +1,3 @@
-export * from './MacSection'
-export * from './LinuxSection'
-export * from './WindowsSection'
+export * from "./MacSection"
+export * from "./LinuxSection"
+export * from "./WindowsSection"

@@ -1,27 +1,7 @@
 import React, { useState } from "react"
 import { LinuxSection, MacSection, WindowsSection } from "./sections"
 import styles from "./styles.module.css"
-
-interface CommandObject {
-	linux?: string
-	windows?: string
-	mac?: string
-}
-
-interface TextObject {
-	linux?: {
-		topText?: string
-		bottomText?: string
-	}
-	windows?: {
-		topText?: string
-		bottomText?: string
-	}
-	mac?: {
-		topText?: string
-		bottomText?: string
-	}
-}
+import { CommandObject, TextObject } from "@site/src/types"
 
 interface OSTabsProps {
 	commands: CommandObject
@@ -56,9 +36,15 @@ export const OSTabs = ({ commands, text }: OSTabsProps) => {
 				</section>
 			</div>
 			<div>
-				{tabOpen === "Linux" && <LinuxSection />}
-				{tabOpen === "Windows" && <WindowsSection />}
-				{tabOpen === "Mac" && <MacSection />}
+				{tabOpen === "Linux" && (
+					<LinuxSection texts={text.linux} command={commands.linux} />
+				)}
+				{tabOpen === "Windows" && (
+					<WindowsSection texts={text.windows} command={commands.windows} />
+				)}
+				{tabOpen === "Mac" && (
+					<MacSection texts={text.mac} command={commands.mac} />
+				)}
 			</div>
 		</>
 	)

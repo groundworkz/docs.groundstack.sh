@@ -1,3 +1,52 @@
 import { OSTabs } from "@site/src/components"
+import Tabs from "@theme/Tabs"
+import TabItem from "@theme/TabItem"
 
-<OSTabs>Here are tabs</OSTabs>
+<OSTabs
+	commands={{ linux: "cd", windows: "cd", linux: "cd" }}
+	text={{
+		linux: { topText: "top", bottomText: "bot" },
+		windows: { topText: "top", bottomText: "bot" },
+		mac: { topText: "top", bottomText: "bot" },
+	}}
+>
+	Here are tabs
+</OSTabs>
+
+<Tabs
+  defaultValue="js"
+  values={[
+      { label: 'JavaScript', value: 'js', },
+      { label: 'Python', value: 'py', },
+      { label: 'Java', value: 'java', },
+  ]}
+>
+<TabItem value="js">
+
+```js
+function helloWorld() {
+	console.log("Hello, world!")
+}
+```
+
+</TabItem>
+<TabItem value="py">
+
+```py
+def hello_world():
+print 'Hello, world!'
+```
+
+</TabItem>
+<TabItem value="java">
+
+```java
+class HelloWorld {
+    public static void main(String args[]) {
+      System.out.println("Hello, World");
+  }
+}
+```
+
+</TabItem>
+</Tabs>
